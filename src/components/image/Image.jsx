@@ -1,11 +1,10 @@
 import React from 'react'
 
-const Image = ({ src }) => {
+const Image = (props) => {
   return (
-    <div className="image">
-        <img src='' alt="" className="image-img" />
-        <p>{src["name"]}</p>
-    </div>
+      <div className="image">
+          <img src={props.src} alt="pokemon" className="image-image" />
+      </div>
   )
 }
 

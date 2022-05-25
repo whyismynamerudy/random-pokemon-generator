@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Button = ({ src }) => {
+const Button = (props) => {
+  
   return (
     <div className="button">
-        <button className="button-button">generate a random pokemon</button>
-        <p>{src["name"]}</p>
+        <p>this is a {JSON.stringify(props.name).replace(/"/g, '')}</p>
+        <button className="button-button" onClick={props.onClick}>generate a random pokemon</button>
     </div>
   )
 }
