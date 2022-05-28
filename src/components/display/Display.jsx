@@ -19,7 +19,8 @@ const Display = (props) => {
 
   const fetchPokemon = async (myPokemon) => {
       const details = await axios.get(myPokemon["url"]);
-      setPokeImage(details["data"]["sprites"]["front_default"]);
+      //setPokeImage(details["data"]["sprites"]["front_default"]);
+      setPokeImage(details["data"]["sprites"]["other"]["official-artwork"]["front_default"]);
       setPokeName(details["data"]["name"]);
       //console.log(details["data"]["sprites"]["front_default"]);
   };

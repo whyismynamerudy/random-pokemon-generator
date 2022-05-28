@@ -11,7 +11,6 @@ function App() {
     const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=151");
     //console.log("data received", data["results"]);
     const [...pokeArray] = data["results"];
-    //console.log(typeof pokeArray);
     setPokeData(pokeArray); //needs to be this instead of .results because in response its "results"
   };
 
